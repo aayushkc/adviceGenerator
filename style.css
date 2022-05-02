@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --cyan-400:hsl(193, 38%, 86%);
+    --neon-green:hsl(150, 100%, 66%);
+    --blue-700:hsl(218, 23%, 16%);
+    --blue-400:hsl(217, 19%, 38%);
+    --blue-500:hsl(217, 19%, 24%);
+    --fs-lg:28px;
+    --primary-font:'Manrope', sans-serif;;
+}
+
+body{
+    background-color: var(--blue-700);
+    font-family: var(--primary-font);
+}
+button{
+    cursor: pointer;
+}
+.advice--container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--blue-500);
+    padding: 2em;
+    max-width: 500px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.advice--holder{
+    position: relative;
+}
+.advice{
+    color: #fff;
+    font-size: var(--fs-lg);
+}
+.advice--title{
+    color: var(--neon-green);
+   
+    letter-spacing: 0.4em;
+}
+.divider, .advice--title, .advice{
+    margin-bottom: 1em;
+}
+.advice--cube{
+    position: absolute;
+    left: 45%;
+    bottom: -40px;
+    background-color: var(--neon-green);
+    border-radius: 50%;
+    padding: 1.25em;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+.advice--cube:hover{
+    box-shadow: 2px 2px 30px var(--neon-green);
+}
+@media  screen and (max-width:500px) {
+    .advice--container{
+        max-width: 350px;
+    }
+    .divider{
+        width: 350px;
+        margin-left: -2em;
+    }
+    .divider img{
+        width: 100%;
+    }
+}
